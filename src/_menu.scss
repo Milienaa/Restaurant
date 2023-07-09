@@ -1,0 +1,110 @@
+.menu {
+    padding-bottom: 70px;
+    background: {
+        image: linear-gradient(270deg, #FFF 0%, #F3F1F1 100%);
+        image: url('../img/bg_menu.png'), linear-gradient(270deg, #FFF 0%, #F3F1F1 100%);
+        blend-mode: soft-light;
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+    &_container{
+        margin: 0 auto;
+        width: 1050px;
+        display: flex;
+        gap: 150px;
+    }
+    &_list {
+        width: 470px;
+        &_item {
+            margin-top: 25px;
+            padding: 10px 0px;
+            span {
+                display: inline-block;
+                margin-left: 70px;
+            }
+            &_special {
+                position: relative;
+                border: 1px $lightmustard solid;
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    right: -1px;
+                    top:-22px;
+                    width: 86px;
+                    height: 22px;
+                    background-image: url('../img/special.png');
+                }
+            }
+        }
+    }
+    text-align: left;
+    h3{
+        color: $mustard;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 65px;
+        @include frame_mustard(24px);
+    }
+    h4 {
+        padding: 5px 15px;
+        color: $lightmustard;
+        font-size: 21px;
+        font-weight: normal;
+        border-bottom: 1px $lightmustard solid;
+    }
+    p {
+        padding: 5px 15px;
+    }
+    
+}
+
+
+@include desktop {
+    .menu {
+        &_container {
+            width: 550px;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+            margin: 0 auto;
+        }
+
+        &_list {
+            width: 550px;
+        }
+    }
+}
+
+@include mobile {
+    .menu {
+        &_container {
+            width: 360px;
+        }
+
+        &_list {
+            width: 360px;
+
+            &_item {
+                span {
+                    margin-left: 60px;
+                }
+                &_special{
+                    border: 0;
+                    &::before {
+                        content: "";
+                        display: none;
+                    }
+                }
+            }
+        }    
+        h3{
+            font-size: 34px;
+        }
+        h4, p {
+            font-size: 0.95rem;
+        }
+        
+    }
+}

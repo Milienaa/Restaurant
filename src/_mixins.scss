@@ -1,0 +1,38 @@
+@mixin frame ($mb){
+    &::after {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 47px;
+        margin: $mb auto;
+        background-image: url('../img/frame.png');
+    }
+}
+
+@mixin frame_mustard ($mb){
+    &::after {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 24px;
+        margin: $mb auto;
+        background: {
+            image: url('../img/frame_mustard.png');
+            repeat: no-repeat;
+        }
+    }
+}
+
+@mixin foot_frame ($mb) {
+    &::after {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 24px;
+        margin: $mb auto;
+        background: {
+            image: url('../img/foot_frame.png');
+            repeat: no-repeat;
+        }
+    }
+}

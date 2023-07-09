@@ -1,0 +1,79 @@
+.header {
+    background: {
+        image: url('../img/bg_head.jpg');
+        size: cover;
+        position: center;
+    }
+
+    &_container{
+        margin: 0 auto;
+        width: 1050px;
+    }
+
+    h1 {
+        color: $white;
+        padding-top: 180px;
+        text-shadow: 2px 2px 0px #000;
+        font-size: 90px;
+
+        @include frame(55px)
+    }
+
+    &_item{
+        margin-top: 55px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    a {
+        width: 220px;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 25px 30px;
+        border: 1px solid #FFF;
+        background: rgba(255, 255, 255, 0.60);
+    }
+
+}
+
+@include laptop {
+    .header{
+
+        &_container{
+            width: 708px;
+        }
+
+        &_item{
+            padding: 25px 40px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@include tablet {
+    .header {
+        &_container{
+            width: 368px;
+        }
+
+        h1 {
+            font-size: 70px;
+        }
+
+        a {
+            width: 335px;
+        }
+    }
+}
+@include mobile {
+    h1{
+        font-size: 55px;
+    }
+
+    a {
+        width: 368px;
+    }
+}

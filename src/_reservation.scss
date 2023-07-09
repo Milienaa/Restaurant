@@ -1,0 +1,106 @@
+.reservation {
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    }
+    background: {
+        image: linear-gradient(270deg, #FFF 0%, #F3F1F1 100%);
+        image: url('../img/bg_about.jpg'), linear-gradient(270deg, #FFF 0%, #F3F1F1 100%);
+        blend-mode: soft-light;
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+    &_container {
+        width: 1050px;
+        margin: 0 auto;
+        display: flex;
+        gap: 100px;
+    }
+    &_img {
+        display: flex;
+        gap: 30px;
+    }
+
+    h2 {
+        font-size: 36px;
+        color: $mustard;
+        @include frame_mustard(24px);
+        margin-bottom: 35px;
+    }
+    p {
+        color: $black;
+        margin-bottom: 35px;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        
+    }
+    label {
+        display: block;
+        color: $lightmustard;
+        text-align: left;
+    }
+    input{
+        border-radius: none;
+        // display: block;
+        padding: 5px 5px;
+        font-style: italic;
+        &:nth-child(5) {
+            font-style: normal;
+            padding: 10px 60px;
+            background-color: $lightmustard;
+            border: 1px solid $white;
+            color: $white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+       &:focus {
+        border:  1px solid $mustard;
+        outline: 1px solid $mustard;
+       }
+    }
+}
+
+@include desktop {
+    .reservation {
+        &_container {
+            width: 750px;
+            flex-direction: column;
+            align-items: center;
+        }
+        p {
+            margin: 30px auto;
+            width: 470px;
+        }
+        input{
+            padding: 7px 130px 7px 15px;
+            &:nth-child(5) {
+                width: 340px;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .reservation {
+    &_container {
+        width: 360px;
+    }
+    &_img{
+        display: none;
+    }
+    form {
+        flex-direction: column;
+    }
+    input {
+        padding: 7px 180px 7px 15px;
+    }
+    p {
+        width: 360px;
+    }
+    }
+}

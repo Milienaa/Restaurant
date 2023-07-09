@@ -1,0 +1,45 @@
+.reviews {
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    }
+    &_container {
+        width: 60%;
+        margin: 0 auto;
+        padding: 70px 80px;
+        background-color: rgba(0, 0, 0, 0.80);
+    }
+    background: {
+        image: url('../img/bg_reviews.jpg');
+        size: cover;
+        position: center;
+    }
+    h2 {
+        font-size: 36px;
+        color: $white;
+        margin-bottom: 70px;
+    }
+    p {
+        font-family: $review;
+        font: {
+            size: 24px;
+            weight:700;
+        }
+        color: $white;
+        line-height: 173.584%;
+        span {
+            display: block;
+            margin-top: 55px;
+            font-family: $main_text;
+            font-weight: normal;
+        }
+    }
+}
+
+@include laptop{
+    .reviews {
+        &_container{
+            width: 92%;
+        }
+    }
+}

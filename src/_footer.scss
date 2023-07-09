@@ -1,0 +1,60 @@
+.footer {
+    padding: {
+        top: 50px;
+        bottom: 50px;
+    }
+    &_container {
+        width: 1050px;
+        margin: 0 auto;
+        display: flex;
+        gap: 100px;
+        line-height: 180%;
+    }
+    background-color: $black;
+    opacity: 0.75;
+    color: $white;
+    h5 {
+        font-size: 21px;
+        @include foot_frame(24px);
+    }
+    &_item {
+        width: calc(100% / 3);
+        &_wrap {
+            margin-top: 40px;
+        }
+    }
+}
+
+@include desktop {
+    .footer {
+        padding: {
+            top: 100px;
+            bottom: 100px;
+        }
+        &_container {
+            width: 750px;
+            flex-direction: column;
+            gap: 75px;
+            justify-content: center;
+            align-items: center;
+        }
+        &_item {
+            width: 410px;
+        }
+
+    }
+}
+@include tablet {
+    .footer {
+        &_container {
+            width: 350px;
+        }
+        &_item {
+            &:nth-child(1){
+                display: none;
+            }
+            width: 350px;
+        }
+
+    }
+}
